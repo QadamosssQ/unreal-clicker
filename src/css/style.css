@@ -9,7 +9,7 @@
      font-size: 1.7rem;
  }
 
- h1{
+ .ha1{
      margin-top: 5%;
      margin-bottom: 5%;
      height: 10%;
@@ -18,7 +18,9 @@
      justify-content: center;
      color: white;
      font-size: 6rem;
-     text-shadow: 2px 2px 3px black;
+     text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px;
+
+
  }
 
 .gift-card{
@@ -27,7 +29,33 @@
 
 .gplay{
     font-size: 1.5rem;
+
+
 }
+
+
+.on_off {
+
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    padding: 1%;
+    border: white solid 3px;
+    border-radius: 8%;
+
+
+}
+
+.onofff{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.on_off:hover{
+    transform: scale(95%);
+}
+
 
 
 
