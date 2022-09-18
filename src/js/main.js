@@ -7,3 +7,10 @@ function offGlove() {
        off.style.textShadow = "none";
 }
 
+let  counter = 0;
+
+function counting() {
+    counter++;
+    let count = document.getElementById("conter").innerHTML = "Punkty: "+ counter;
+}
+
