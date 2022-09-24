@@ -178,6 +178,22 @@ nav{
 }
 
 
+li{
+   list-style-type: none;
+}
+
+.li_bonus_shop{
+    border: white 2px solid;
+    padding: 2%;
+    margin-top: 1%;
+}
+
+/*.li_bonus_shop:nth-child(3){*/
+/*    background: #ffffff;*/
+/*    color: black;*/
+
+/*}*/
+
 
 
 
