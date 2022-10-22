@@ -8,40 +8,35 @@ function offGlove() {
 }
 
 
+show();
+
+
+function clickCounter() {
+
+
+       if (localStorage.clickcount) {
+           localStorage.clickcount = Number(localStorage.clickcount) + 1;
+       } else {
+           localStorage.clickcount = 1;
+       }
+
+
+    show();
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-let  counter = 0;
 
 let dev_add_points = document.getElementsByClassName("title_game");
 
 function add_points() {
-counter = counter + 1000000000;
+localStorage.clickcount+= 1000;
+show();
 }
 
-let counter_button = document.getElementById("buttonB");
-
-counter_button.addEventListener("click", function counting() {
-
-    counter++;
-    let count = document.getElementById("conter").innerHTML = "Punkty: "+ counter;
-});
-
-
-
-
-
+function show(){
+    document.getElementById("conter").innerHTML = "Punkty: "+ localStorage.clickcount;
+}
 
 let x2p = document.getElementById("x2p");
 let x3p = document.getElementById("x3p");
@@ -60,16 +55,16 @@ let auto1s_bool=false;
 let active_bonus = document.getElementsByClassName("ul_add-ons");
 
 function x2p_go_active(){
-    if(x2p_bool==true){
+    if(x2p_bool===true){
         alert("Już aktywny!");
     }else {
-    if(counter >= 1){
-    counter= counter - 1;
+    if(localStorage.clickcount >= 100){
+    localStorage.clickcount -= 100;
     x2p_bool=true;
     x2p.style.backgroundColor = "rgb(255, 255, 255)";
     x2p.style.color = "rgb(0, 0, 0)";
     console.log("x2p: active");
-    let count = document.getElementById("conter").innerHTML = "Punkty: "+ counter;
+    show();
     active_bonus[0].innerHTML += "<li>Double click: active</li>";
 }else{
     alert("Nie masz wystarczającej ilości punktów!");
@@ -81,16 +76,16 @@ function x2p_go_active(){
 
 
 function x3p_go_active() {
-    if (x3p_bool == true) {
+    if (x3p_bool === true) {
         alert("Już aktywny!");
     } else {
-        if (counter >= 300) {
-            counter = counter - 300;
+        if (localStorage.clickcount >= 300) {
+            localStorage.clickcount -= 300;
             x3p_bool = true;
             x3p.style.backgroundColor = "rgb(255, 255, 255)";
             x3p.style.color = "rgb(0, 0, 0)";
             console.log("x3p: active");
-            let count = document.getElementById("conter").innerHTML = "Punkty: " + counter;
+            show();
             active_bonus[0].innerHTML += "<li>Triple click: active</li>";
         } else {
             alert("Nie masz wystarczającej ilości punktów!");
@@ -98,17 +93,17 @@ function x3p_go_active() {
     }
 }
 function auto5s_go_active(){
-    if (auto5s_bool == true) {
+    if (auto5s_bool === true) {
         alert("Już aktywny!");
     } else {
-        if (counter >= 150) {
+        if (localStorage.clickcount >= 150) {
 
-            counter = counter - 150;
+            localStorage.clickcount -= 150;
             auto5s_bool = true;
             auto5s.style.backgroundColor = "rgb(255, 255, 255)";
             auto5s.style.color = "rgb(0, 0, 0)";
             console.log("auto5s: active");
-            let count = document.getElementById("conter").innerHTML = "Punkty: " + counter;
+            show();
             active_bonus[0].innerHTML += "<li>Auto click-5s: active</li>";
         } else {
             alert("Nie masz wystarczającej ilości punktów!");
@@ -119,16 +114,16 @@ function auto5s_go_active(){
 
 
 function auto3s_go_active() {
-    if (auto3s_bool == true) {
+    if (auto3s_bool === true) {
         alert("Już aktywny!");
     } else {
-        if (counter >= 200) {
-            counter = counter - 200;
+        if (localStorage.clickcount >= 200) {
+            localStorage.clickcount -= 200;
             auto3s_bool = true;
             auto3s.style.backgroundColor = "rgb(255, 255, 255)";
             auto3s.style.color = "rgb(0, 0, 0)";
             console.log("auto3s: active");
-            let count = document.getElementById("conter").innerHTML = "Punkty: " + counter;
+            show();
             active_bonus[0].innerHTML += "<li>Auto click-3s: active</li>";
         } else {
             alert("Nie masz wystarczającej ilości punktów!");
@@ -136,17 +131,17 @@ function auto3s_go_active() {
     }
 }
 function auto1s_go_active() {
-    if (auto1s_bool == true) {
+    if (auto1s_bool === true) {
         alert("Już aktywny!");
     } else {
 
-        if (counter >= 400) {
-            counter = counter - 400;
+        if (localStorage.clickcount >= 400) {
+            localStorage.clickcount -= 400;
             auto1s_bool = true;
             auto1s.style.backgroundColor = "rgb(255, 255, 255)";
             auto1s.style.color = "rgb(0, 0, 0)";
             console.log("auto1s: active");
-            let count = document.getElementById("conter").innerHTML = "Punkty: " + counter;
+            show();
             active_bonus[0].innerHTML += "<li>Auto click-1s: active</li>";
         } else {
             alert("Nie masz wystarczającej ilości punktów!");
@@ -207,6 +202,21 @@ function show_time(){
 }
 
 
+function clear_ls(){
+
+        let text = "Czy napewno chcesz usunąć wszystkie punkty i bonusy?\n Nie odzyskasz tego";
+        if (confirm(text) === true) {
+            localStorage.clear();
+            console.log("cleared");
+            show();
+        } else {
+            alert("cancelled")
+        }
+
+
+
+
+}
 
 // show_time()
 

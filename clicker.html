@@ -57,10 +57,10 @@
 
 
 
-<h2 class="title_game" onclick="add_points()">Klikaj po punkty</h2>
+<h2 class="title_game">Klikaj po punkty</h2>
 
 <div class="mid-button">
-    <button type="button" class="button_style_1" id="buttonB"  >Kliknij tu</button>
+    <button type="button" class="button_style_1" id="buttonB" onclick="clickCounter()"  >Kliknij tu</button>
 </div>
 
 
@@ -102,9 +102,9 @@
 
 </div>
 
+<button class="clear_ls" onclick="clear_ls()">Clear local storge</button>
 
-
-
+<button class="dev_tool"  onclick="add_points()">+1000pkt.</button>
 <script src="src/js/main.js"></script>
 </body>
 </html>
