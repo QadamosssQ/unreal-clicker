@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="unreal-clicker">
+    <meta name="description" content="Simple games in which you will win interesting prizes">
+    <meta name="author" content="Adamoss">
+    <meta name="robots" content="all">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <title>Unreal Clicker-Clicker</title>
+    <link rel="stylesheet" href="../src/css/game.css">
+</head>
+<body>
+
+
+<header>
+
+    <p class="nav_title"><a href="../index.html">Unreal-Clicker</a></p>
+    <nav>
+        <ul class="nav__links">
+            <li><a href="../html/news.html">Nowości</a></li>
+            <li><a href="../html/awards.html">Nagrody</a></li>
+            <li><a href="../html/info.html">Info</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="../html/select_games.html">Gry</a>
+    <p class="menu cta">Menu</p>
+</header>
+
+
+<div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+        <a href="../html/select_games.html">Gry</a>
+        <a href="../html/news.html">Nowości</a>
+        <a href="../html/awards.html">Nagrody</a>
+        <a href="../html/info.html">Info</a>
+    </div>
+</div>
+
+
+
+
+<h2 class="title_games">Klikaj po punkty</h2>
+
+<div class="counter_clicker">
+    <h3 class="counter" id="conter">Punkty: 0</h3>
+</div>
+
+
+<div class="counter_all_points_div">
+    <h3 class="counter" id="counter_all_points">Całość: 0</h3>
+</div>
+
+
+
+
+
+<div class="mid-button">
+    <button type="button" class="button_style_1" id="buttonB" onclick="clickCounter()"  >Kliknij tu</button>
+</div>
+
+
+
+
+
+<div class="around">
+
+    <div class="bonus_shop">
+
+        <ul class="ul_bonus_shop">
+            <li class="title_bonus"><p>Bonus shop:</p></li>
+            <li class="li_bonus_shop" id="x2p" onclick="x2p_go_active(x2p_bool)">Double click-100pkt.</li>
+            <li class="li_bonus_shop" id="x3p" onclick="x3p_go_active(x3p_bool)">Triple click-300pkt.</li>
+            <li class="li_bonus_shop" id="auto5s" onclick="auto5s_go_active(auto5s_bool)">Auto click 5s-150pkt.</li>
+            <li class="li_bonus_shop" id="auto3s" onclick="auto3s_go_active(auto3s_bool)">Auto click 3s-200pkt.</li>
+            <li class="li_bonus_shop" id="auto1s" onclick="auto1s_go_active(auto1s_bool)">Auto click 1s-400pkt.</li>
+        </ul>
+
+
+    </div>
+
+
+<div class="add-ons">
+    <ul class="ul_add-ons">
+        <li class="title_bonus"><p>Your bonuses:</p></li>
+
+
+
+    </ul>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="clear_ls" onclick="clear_ls()">Clear local storge</button>
+
+<button class="dev_tool"  onclick="add_points()">+1000pkt.</button>
+<script src="../src/js/main.js"></script>
+</body>
+</html>
